@@ -1,0 +1,32 @@
+# Application
+spring.application.name=simulacion-service
+server.port=8080
+  
+  # Database Configuration (PostgreSQL)
+spring.datasource.url=jdbc:postgresql://localhost:5432/andesfin_db
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+spring.datasource.driver-class-name=org.postgresql.Driver
+  
+  # JPA Configuration
+spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+  
+  # SQL initialization
+spring.sql.init.mode=always
+spring.sql.init.continue-on-error=true
+  
+  # UUID configuration
+spring.jpa.properties.hibernate.id.uuid_generator_strategy=org.hibernate.id.uuid2.UUIDGenerator
+  
+  # Jackson configuration
+spring.jackson.default-property-inclusion=NON_NULL
+spring.jackson.serialization.WRITE_DATES_AS_TIMESTAMPS=false
+  
+  # Logging
+logging.level.com.andesfin.simulacion=DEBUG
+logging.level.org.springframework.web=INFO
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
